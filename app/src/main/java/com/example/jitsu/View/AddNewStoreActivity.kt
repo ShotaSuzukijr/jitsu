@@ -1,10 +1,10 @@
-package com.example.jitsu
+package com.example.jitsu.View
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Picture
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.jitsu.R
 
 class AddNewStoreActivity : AppCompatActivity() {
     private val pickPhotoRequestCode = 2

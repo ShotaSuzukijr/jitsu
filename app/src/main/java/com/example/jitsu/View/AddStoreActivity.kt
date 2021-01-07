@@ -1,8 +1,9 @@
-package com.example.jitsu
+package com.example.jitsu.View
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.jitsu.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class AddStoreActivity : AppCompatActivity() {

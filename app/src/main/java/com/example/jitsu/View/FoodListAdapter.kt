@@ -1,10 +1,11 @@
-package com.example.jitsu
+package com.example.jitsu.View
 
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.jitsu.R
 
 class FoodListAdapter internal constructor(context: Context)
     : RecyclerView.Adapter<FoodListAdapter.FoodViewHolder>() {
