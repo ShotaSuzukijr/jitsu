@@ -13,26 +13,35 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView3"
+        <EditText
+            android:id="@+id/addPhotoMemoEditText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:text="TextView" />
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
-        <TextView
-            android:id="@+id/textView4"
+        <Button
+            android:id="@+id/addPhotoMemoOpenButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="OPEN" />
+
+        <Button
+            android:id="@+id/addPhotoMemoSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SAVE" />
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/addPhotoImageButton"
+    <ImageView
+        android:id="@+id/addPhotoMemoImageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="5"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <LinearLayout

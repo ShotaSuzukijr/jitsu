@@ -1,11 +1,13 @@
-package com.example.jitsu.View
+package com.example.jitsu
 
+import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.jitsu.R
 
 class FoodListAdapter internal constructor(context: Context)
     : RecyclerView.Adapter<FoodListAdapter.FoodViewHolder>() {
@@ -18,20 +20,21 @@ class FoodListAdapter internal constructor(context: Context)
         val memoImageView: TextView = itemView.findViewById(R.id.foodText)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val itemView = inflater.inflate(R.layout.recyclerview_item, parent, false)
-        return PhotoViewHolder(itemView)
+        return FoodViewHolder(itemView)
 
     }
 
-    override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val current = photos[position]
-        holder.memoItemView.text = current.memo
+        holder.memoImageView.text = current.memo
         holder.photoItemView.setImageURI(Uri.parse(current.uri))
     }
 
     internal fun setPhotos(photos: List<Photo>) {
-        this.photos = photos notifyDataSetChanged ()
+        this.photos = photos
+        notifyDataSetChanged ()
     }
 
     override fun getItemCount() = photos.size
