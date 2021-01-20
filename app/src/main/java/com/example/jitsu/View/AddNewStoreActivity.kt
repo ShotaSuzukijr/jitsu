@@ -35,11 +35,16 @@ class AddNewStoreActivity : AppCompatActivity() {
     val saveButton: Button = findViewById(R.id.addPhotoMemoSaveButton)
     saveButton.setOnClickListener {
         val editText = findViewById<EditText>(R.id.addPhotoMemoEditText)
+        val editPrice = findViewById<EditText>(R.id.editTextPrice)
+        val editTime = findViewById<EditText>(R.id.editTextTime)
         val replyIntent = Intent()
 
         if (imageUri == null || TextUtils.isEmpty(editText.text)) {
             setResult(Activity.RESULT_CANCELED, replyIntent) } else {
-            val photo = Photo(imageUri.toString(), editText.text.toString())
+            val photo = Photo(imageUri.toString(),
+                    editText.text.toString(),
+                    editPrice.text.toString(),
+                    editTime.text.toString())
             val viewModel = ViewModelProvider(this).get(AddPhotoViewModel::class.java)
             viewModel.insert(photo)
             setResult(Activity.RESULT_OK, replyIntent)

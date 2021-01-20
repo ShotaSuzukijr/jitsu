@@ -50,19 +50,23 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="値段" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="期限" />
 
     </LinearLayout>
 

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -35,7 +36,7 @@ class AddStoreActivity : AppCompatActivity() {
             photos?.let { adapter.setPhotos(it)}
         })
 
-        val back: Button = findViewById(R.id.backToMain)
+        val back: ImageButton = findViewById(R.id.backToMainImage)
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(this@AddStoreActivity, AddNewStoreActivity::class.java)

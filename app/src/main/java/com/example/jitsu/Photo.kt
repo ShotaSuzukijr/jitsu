@@ -7,7 +7,10 @@ import androidx.room.*
 @Entity(tableName = "photo_table")
 data class Photo (
     @PrimaryKey @ColumnInfo(name = "uri") val uri: String,
-    @ColumnInfo(name = "memo") val memo: String
+    @ColumnInfo(name = "memo") val memo: String,
+    @ColumnInfo(name = "price") val price: String,
+    @ColumnInfo(name = "time") val time: String
+
 )
 
 @Dao

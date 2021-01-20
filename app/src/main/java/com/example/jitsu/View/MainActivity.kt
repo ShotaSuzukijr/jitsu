@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import com.example.jitsu.R
 
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val SearchArea: Button = findViewById(R.id.SearchArea)
         val AddFoodMap: Button = findViewById(R.id.AddFoodMap)
-        val TextArea: TextView = findViewById(R.id.TextArea)
+        val TextArea: EditText = findViewById(R.id.editTextArea)
         SearchArea.setOnClickListener {
             val intent = Intent(this, SearchMapActivity::class.java)
             intent.putExtra("VALUE", TextArea.text.toString())
