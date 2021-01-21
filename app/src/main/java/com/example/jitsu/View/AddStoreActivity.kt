@@ -26,6 +26,7 @@ class AddStoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_store)
 
+
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val adapter = FoodListAdapter(this)
         recyclerView.adapter = adapter
