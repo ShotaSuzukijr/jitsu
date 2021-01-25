@@ -8,4 +8,8 @@ class PhotoRepository(private val photoDao: PhotoDao) {
     suspend fun insert(photo: Photo) {
         photoDao.insert(photo)
     }
+
+    suspend fun delete(photo: Photo){
+        photoDao.delete(photo)
+}
 }

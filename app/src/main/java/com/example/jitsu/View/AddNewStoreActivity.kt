@@ -36,7 +36,7 @@ class AddNewStoreActivity : AppCompatActivity() {
     saveButton.setOnClickListener {
         val editText = findViewById<EditText>(R.id.addPhotoMemoEditText)
         val editPrice = findViewById<EditText>(R.id.editTextPrice)
-        val editTime = findViewById<EditText>(R.id.editTextTime)
+        val editTime = findViewById<EditText>(R.id.editTextDate)
         val replyIntent = Intent()
 
         if (imageUri == null || TextUtils.isEmpty(editText.text)) {

@@ -60,13 +60,12 @@
             android:text="値段" />
 
         <EditText
-            android:id="@+id/editTextTime"
+            android:id="@+id/editTextDate"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="期限" />
+            android:inputType="date" />
 
     </LinearLayout>
 

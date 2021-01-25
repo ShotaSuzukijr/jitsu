@@ -9,16 +9,16 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.jitsu.AddPhotoViewModel
-import com.example.jitsu.FoodListAdapter
-import com.example.jitsu.PhotoViewModel
-import com.example.jitsu.R
+import com.example.jitsu.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.nio.file.Files.delete
 
-class AddStoreActivity : AppCompatActivity() {
+class   AddStoreActivity : AppCompatActivity() {
     private val addActivityRequestCode = 1
     private lateinit var viewModel: PhotoViewModel
 
@@ -62,4 +62,18 @@ class AddStoreActivity : AppCompatActivity() {
             }
         }
     }
+
+    val touchHelper = ItemTouchHelper(
+            object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+                override fun onMove(
+                        view: RecyclerView,
+                        holder: RecyclerView.ViewHolder,
+                        target: RecyclerView.ViewHolder): Boolean {
+                    return false
+                }
+
+                override fun onSwiped(holder: RecyclerView.ViewHolder, direction: Int) {
+                }
+            }
+    )
 }

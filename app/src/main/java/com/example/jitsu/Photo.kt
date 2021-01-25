@@ -20,6 +20,9 @@ interface PhotoDao{
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(photo: Photo)
+
+    @Delete()
+    suspend fun delete(photo: Photo)
 }
 
 @Database(entities = arrayOf(Photo::class), version = 1, exportSchema = false)
