@@ -34,6 +34,8 @@ class FoodListAdapter internal constructor(context: Context)
         holder.memoPriceView.text = current.price
         holder.memoTimeView.text = current.time
         holder.photoItemView.setImageURI(Uri.parse(current.uri))
+
+
     }
 
     internal fun setPhotos(photos: List<Photo>) {
