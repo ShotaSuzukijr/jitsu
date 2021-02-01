@@ -3,36 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="500dp"
     android:orientation="vertical"
     android:visibility="visible"
     tools:context=".View.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:text="HomeEats"
+        android:textSize="36sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="ユーザー名"
+        android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editTextNumberPassword3"
+        android:id="@+id/editPassward"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:ems="10"
-        android:inputType="numberPassword" />
+        android:inputType="numberPassword"
+        android:text="パスワード"
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_weight="3"
+        android:text="ログイン"
+        android:textSize="36sp" />
 
 </LinearLayout>

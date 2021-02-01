@@ -19,7 +19,7 @@ class ExmHomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_exm_home)
 
         val SearchArea: Button = findViewById(R.id.SearchArea)
         val AddFoodMap: Button = findViewById(R.id.AddFoodMap)
