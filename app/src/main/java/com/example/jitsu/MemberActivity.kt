@@ -9,19 +9,21 @@ import com.example.jitsu.View.AddStoreActivity
 import com.example.jitsu.View.MainActivity
 
 class MemberActivity : AppCompatActivity() {
+    private val memberActivityRequestCode = 3
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member)
 
         val textUser: TextView = findViewById(R.id.textUser)
         val logoutButton: Button = findViewById(R.id.loginButton)
-        val value4 = intent.getStringExtra("VALUE2")
-        textUser.text = "${value4}"
+        val value5 = intent.getStringExtra("USER1")
+        textUser.text = "${value5}"
 
         logoutButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ExmHomeActivity::class.java)
             startActivity(intent)
         }
+    }
 
     }
-}

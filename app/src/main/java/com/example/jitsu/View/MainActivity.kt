@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener {
             val intent = Intent(this, ExmHomeActivity::class.java)
-            intent.putExtra("VALUE2", editUser.text.toString())
+            intent.putExtra("USER", editUser.text.toString())
             startActivity(intent)
     }
 

@@ -13,7 +13,7 @@ class SearchMapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_map)
 
         val TextAreaMap: TextView = findViewById(R.id.TextAreaMap)
-        val value1 = intent.getStringExtra("VALUE")
+        val value1 = intent.getStringExtra("AREA")
         TextAreaMap.text = "${value1}"
     }
 }

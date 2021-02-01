@@ -29,7 +29,7 @@ class ExmHomeActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerviewMain)
         val adapter = FoodListAdapter(this)
         val textName: TextView = findViewById(R.id.textName)
-        val value3 = intent.getStringExtra("VALUE2")
+        val value3 = intent.getStringExtra("USER")
         textName.text = "${value3}"
 
         recyclerView.adapter = adapter
@@ -42,7 +42,7 @@ class ExmHomeActivity : AppCompatActivity() {
 
         SearchArea.setOnClickListener {
             val intent = Intent(this, SearchMapActivity::class.java)
-            intent.putExtra("VALUE", TextArea.text.toString())
+            intent.putExtra("AREA", TextArea.text.toString())
             startActivity(intent)
         }
 
@@ -53,6 +53,7 @@ class ExmHomeActivity : AppCompatActivity() {
 
         MemberButton.setOnClickListener {
             val intent = Intent(this, MemberActivity::class.java)
+            intent.putExtra("USER1", textName.text.toString())
             startActivity(intent)
         }
 
