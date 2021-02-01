@@ -10,10 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.jitsu.ExmHomeActivity
-import com.example.jitsu.FoodListAdapter
-import com.example.jitsu.PhotoViewModel
-import com.example.jitsu.R
+import com.example.jitsu.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener {
             val intent = Intent(this, ExmHomeActivity::class.java)
-            intent.putExtra("VALUE", editUser.text.toString())
+            intent.putExtra("VALUE2", editUser.text.toString())
             startActivity(intent)
     }
 

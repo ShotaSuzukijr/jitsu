@@ -8,6 +8,14 @@
     android:visibility="visible"
     tools:context=".ExmHomeActivity">
 
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView"
+        android:textSize="18sp" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -65,6 +73,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="食品" />
+
+        <Button
+            android:id="@+id/MemberButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="会員証" />
     </LinearLayout>
 
 </LinearLayout>

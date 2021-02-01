@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,9 +24,14 @@ class ExmHomeActivity : AppCompatActivity() {
 
         val SearchArea: Button = findViewById(R.id.SearchArea)
         val AddFoodMap: Button = findViewById(R.id.AddFoodMap)
+        val MemberButton: Button = findViewById(R.id.MemberButton)
         val TextArea: EditText = findViewById(R.id.editTextArea)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerviewMain)
         val adapter = FoodListAdapter(this)
+        val textName: TextView = findViewById(R.id.textName)
+        val value3 = intent.getStringExtra("VALUE2")
+        textName.text = "${value3}"
+
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -44,5 +50,12 @@ class ExmHomeActivity : AppCompatActivity() {
             val intent = Intent(this, AddStoreActivity::class.java)
             startActivity(intent)
         }
+
+        MemberButton.setOnClickListener {
+            val intent = Intent(this, MemberActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
