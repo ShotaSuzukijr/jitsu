@@ -14,11 +14,6 @@ class SearchMapActivity : AppCompatActivity() {
 
         val TextAreaMap: TextView = findViewById(R.id.TextAreaMap)
         val value1 = intent.getStringExtra("VALUE")
-        val BackHomeMap: ImageButton = findViewById(R.id.BackHomeMap)
         TextAreaMap.text = "${value1}"
-
-        BackHomeMap.setOnClickListener {
-            finish()
-        }
     }
 }

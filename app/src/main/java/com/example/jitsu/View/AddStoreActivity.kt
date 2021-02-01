@@ -37,16 +37,14 @@ class   AddStoreActivity : AppCompatActivity() {
             photos?.let { adapter.setPhotos(it)}
         })
 
-        val back: ImageButton = findViewById(R.id.backToMainImage)
+
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(this@AddStoreActivity, AddNewStoreActivity::class.java)
             startActivityForResult(intent, addActivityRequestCode)
         }
 
-        back.setOnClickListener {
-            finish()
-        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -63,18 +61,5 @@ class   AddStoreActivity : AppCompatActivity() {
         }
     }
 
-    val touchHelper = ItemTouchHelper(
-            object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
-                override fun onMove(
-                        view: RecyclerView,
-                        holder: RecyclerView.ViewHolder,
-                        target: RecyclerView.ViewHolder): Boolean {
-                    return false
-                }
 
-                override fun onSwiped(holder: RecyclerView.ViewHolder, direction: Int) {
-                    PhotoViewModel.delete(photo[holder.adapterPosition])
-                }
-            }
-    )
 }

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jitsu">
-        <activity android:name=".View.SearchMapActivity"></activity>
+        <activity android:name=".ExmHomeActivity"></activity>
+        <activity android:name=".View.SearchMapActivity" />
         <activity android:name=".SEARCJ" />
         <activity android:name=".View.AddNewStoreActivity" />
         <activity android:name=".View.AddStoreActivity" />

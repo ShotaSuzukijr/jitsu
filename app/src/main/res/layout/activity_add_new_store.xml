@@ -17,10 +17,11 @@
             android:id="@+id/addPhotoMemoEditText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="商品名"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/addPhotoMemoOpenButton"
@@ -40,8 +41,8 @@
     <ImageView
         android:id="@+id/addPhotoMemoImageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
+        android:layout_height="50dp"
+        android:layout_weight="3"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <LinearLayout
@@ -57,7 +58,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="値段" />
+            android:text="値段"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextDate"
@@ -65,14 +67,18 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="date" />
+            android:inputType="date"
+            android:text="日付け"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
-    <com.google.android.gms.maps.MapView
+    <fragment
         android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3" />
+        android:layout_height="50dp"
+        android:layout_weight="3"
+        tools:context=".MapsActivity" />
 
 </LinearLayout>

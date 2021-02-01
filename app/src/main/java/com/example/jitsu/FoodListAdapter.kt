@@ -17,7 +17,6 @@ class FoodListAdapter internal constructor(context: Context)
 
     inner class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val photoItemView: ImageView = itemView.findViewById(R.id.foodImage)
-        val memoImageView: TextView = itemView.findViewById(R.id.foodText)
         val memoPriceView: TextView = itemView.findViewById(R.id.foodPrice)
         val memoTimeView: TextView = itemView.findViewById(R.id.foodTime)
     }
@@ -30,7 +29,6 @@ class FoodListAdapter internal constructor(context: Context)
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val current = photos[position]
-        holder.memoImageView.text = current.memo
         holder.memoPriceView.text = current.price
         holder.memoTimeView.text = current.time
         holder.photoItemView.setImageURI(Uri.parse(current.uri))

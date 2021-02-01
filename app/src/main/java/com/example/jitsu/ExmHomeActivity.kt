@@ -1,20 +1,18 @@
-package com.example.jitsu.View
+package com.example.jitsu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.jitsu.FoodListAdapter
-import com.example.jitsu.PhotoViewModel
-import com.example.jitsu.R
+import com.example.jitsu.View.AddStoreActivity
+import com.example.jitsu.View.SearchMapActivity
 
-class MainActivity : AppCompatActivity() {
+class ExmHomeActivity : AppCompatActivity() {
     private val mainActivityRequestCode = 2
     private lateinit var viewModel: PhotoViewModel
 
@@ -40,11 +38,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SearchMapActivity::class.java)
             intent.putExtra("VALUE", TextArea.text.toString())
             startActivity(intent)
-    }
+        }
 
         AddFoodMap.setOnClickListener {
             val intent = Intent(this, AddStoreActivity::class.java)
             startActivity(intent)
         }
-}
+    }
 }
