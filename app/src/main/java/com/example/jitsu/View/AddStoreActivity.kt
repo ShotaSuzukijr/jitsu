@@ -73,6 +73,7 @@ class   AddStoreActivity : AppCompatActivity() {
                 }
 
                 override fun onSwiped(holder: RecyclerView.ViewHolder, direction: Int) {
+                    PhotoViewModel.delete(photo[holder.adapterPosition])
                 }
             }
     )
