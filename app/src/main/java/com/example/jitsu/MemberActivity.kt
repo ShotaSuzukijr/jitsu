@@ -16,12 +16,12 @@ class MemberActivity : AppCompatActivity() {
         setContentView(R.layout.activity_member)
 
         val textUser: TextView = findViewById(R.id.textUser)
-        val logoutButton: Button = findViewById(R.id.loginButton)
+        val logoutButton: Button = findViewById(R.id.logoutButton)
         val value5 = intent.getStringExtra("USER1")
         textUser.text = "${value5}"
 
         logoutButton.setOnClickListener {
-            val intent = Intent(this, ExmHomeActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
